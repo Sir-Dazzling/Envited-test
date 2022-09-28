@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.text-linear-gradient {
+  color: linear-gradient(90deg, #8456EC 24.2%, #E87BF8 120.46%);
+}
+
 .footer {
   display: flex;
   flex: 1;
