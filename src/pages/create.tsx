@@ -13,8 +13,6 @@ export default function Create() {
       title="Create Event"
       heading="Fill in relevant details to proceed"
       left={<LeftSide />}
-      afterText="Don't have an account?"
-      linkText="Register"
       right={<CreateEventForm />}
       link={Pages.EVENT}
     />

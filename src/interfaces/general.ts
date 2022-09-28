@@ -19,9 +19,9 @@ export type CreateEventLayoutProps = {
   heading: string;
   subheading?: string;
   title: string;
-  afterText: string;
-  link: string;
-  linkText: string;
+  afterText?: string;
+  link?: string;
+  linkText?: string;
 };
 
 export type CreateEventFormProps = {
