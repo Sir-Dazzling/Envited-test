@@ -1,18 +1,13 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { ChangeEvent, FormEvent, useState } from "react";
+import { Pages } from "../../../constants/PageNames";
 import { CreateEventFormProps } from "../../../interfaces/general";
 import CustomButton from "../../general/button/CustomButton";
 import CustomInputField from "../../general/CustomInputField";
-import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import TimePicker from "@mui/lab/TimePicker";
-import DateTimePicker from "@mui/lab/DateTimePicker";
-import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
-import MobileDatePicker from "@mui/lab/MobileDatePicker";
 
 const CreateEventForm = () => {
+  const router = useRouter();
   const [formState, setFormState] = useState<CreateEventFormProps>({
     endDate: new Date(),
     eventPhoto: "",
@@ -30,6 +25,7 @@ const CreateEventForm = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    router.push(Pages.EVENT);
   };
 
   return (
@@ -75,7 +71,7 @@ const CreateEventForm = () => {
         containerClassName="mb-6"
         inputClassName="w-full"
         onChange={handleChange}
-        value={formState.hostName}
+        value={formState.location}
         errors={[]}
         required
       />
