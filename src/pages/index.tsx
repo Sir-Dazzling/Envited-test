@@ -24,7 +24,7 @@ export default function Home() {
             <CustomButton
               variant="primary"
               className="p-1 rounded-xl w-44 md:w-96 mx-auto lg:self-end transition 
-            duration-500 transform hover:-translate-y-4 ease-in-out"
+            duration-500 transform hover:-translate-y-4 ease-in-out text-sm"
             >
               🎉 Create my event
             </CustomButton>
