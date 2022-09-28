@@ -1,8 +1,10 @@
+import Link from "next/link";
 import React from "react";
 import CustomButton from "../components/general/button/CustomButton";
 import Layout from "../components/general/Layout";
 import CatchyHeader from "../components/specific/landing/CatchyHeader";
 import LandingImage from "../components/specific/landing/LandingImage";
+import { Pages } from "../constants/PageNames";
 
 export default function Home() {
   return (
@@ -18,13 +20,15 @@ export default function Home() {
 
         <div className=" flex flex-col px-28">
           <LandingImage />
-          <CustomButton
-            variant="primary"
-            className="p-1 rounded-xl lg:self-end transition w-80
-            duration-500 transform hover:-translate-y-4 ease-in-out self-center"
-          >
-            🎉 Create my event
-          </CustomButton>
+          <Link href={Pages.CREATE}>
+            <CustomButton
+              variant="primary"
+              className="p-1 rounded-xl w-44 md:w-96 mx-auto lg:self-end transition 
+            duration-500 transform hover:-translate-y-4 ease-in-out"
+            >
+              🎉 Create my event
+            </CustomButton>
+          </Link>
         </div>
       </div>
 
@@ -35,13 +39,15 @@ export default function Home() {
           <div className="flex flex-col lg:flex-col items-end">
             <CatchyHeader />
             <div>
-              <CustomButton
-                variant="primary"
-                className="p-1 rounded-xl w-44 md:w-96 mx-auto lg:self-end transition 
+              <Link href={Pages.CREATE}>
+                <CustomButton
+                  variant="primary"
+                  className="p-1 rounded-xl w-44 md:w-96 mx-auto lg:self-end transition 
             duration-500 transform hover:-translate-y-4 ease-in-out"
-              >
-                🎉 Create my event
-              </CustomButton>
+                >
+                  🎉 Create my event
+                </CustomButton>
+              </Link>
             </div>
           </div>
         </div>
